@@ -25,6 +25,22 @@ const routes: Routes = [
   {
     path: 'stepone',
     component: RegistrationComponent
+  },
+  {
+    path: '#about',
+    component: AboutComponent
+  },
+  {
+    path: '#banner',
+    component: BannerComponent
+  },
+  {
+    path: '#testimonial',
+    component: TestimonialComponent
+  },
+  {
+    path: '#contact',
+    component: ContactComponent
   }
 
 ];

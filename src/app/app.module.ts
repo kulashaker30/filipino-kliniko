@@ -15,19 +15,19 @@ import { SteptwoComponent } from './registration/steptwo/steptwo.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-// const routes: Routes = [
+const routes: Routes = [
   
-//   {
-//     path: '',
-//     component: AppComponent
-//   },
+  {
+    path: '',
+    component: AppComponent
+  },
 
-//   {
-//     path: 'stepone',
-//     component: RegistrationComponent
-//   }
+  {
+    path: 'stepone',
+    component: RegistrationComponent
+  }
 
-// ];
+];
 
 @NgModule({
   declarations: [
@@ -46,8 +46,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
-    // RouterModule.forRoot(routes)
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

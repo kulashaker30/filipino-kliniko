@@ -10,13 +10,15 @@ declare var ga : Function;
 })
 export class AppComponent {
   title = 'app';
-
+  currentRoute: any = '';
   //Google Analytics
   constructor(public router: Router) {
-    this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd) {
-        ga('set', 'page', event.urlAfterRedirects);
-        ga('send', 'pagview');
+    this.router.events.subscribe(route => {
+      let newRoute = route || '/';
+      if(newRoute !== this.currentRoute) {
+        // ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview', newRoute);
+        this.currentRoute = newRoute;
       }
     });
   }
